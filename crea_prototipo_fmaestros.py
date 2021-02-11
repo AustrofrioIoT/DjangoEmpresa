@@ -20,10 +20,10 @@ from django.conf import settings
 # settings.BASE_DIR
 
 d_config = {
-    'nombre_clase': 'OrigenContacto',
-    'nombre_inicial_url': 'origencontacto',
-    'titulo_clase_singular': 'Origen del Contacto',
-    'titulo_clase_plural': 'Origen de los Contactos',
+    'nombre_clase': 'Obra',
+    'nombre_inicial_url': 'obras',
+    'titulo_clase_singular': 'Obra',
+    'titulo_clase_plural': 'Obras',
 }
 
 def anade_texto_a_fichero(path_completo_fichero, texto, codigo_python=True):

@@ -85,4 +85,30 @@ urlpatterns = [
 
 
 
+
+# _____________ INI Código añadido por crea_prototipo_fmaestros.py
+ 
+    url(r'^obras/$',          fmaestros_views.obras_listado,  name='obras-list'),
+    url(r'^obras/list/$',     fmaestros_views.obras_listado,  name='obras-list'),
+    url(r'^obras/list/add/$', fmaestros_views.obras_nuevo,    name='obras-nuevo'),
+    url(r'^obras/add/$',      fmaestros_views.obras_nuevo,    name='obras-nuevo'),
+    url(r'^obras/edit/$',     fmaestros_views.obras_editar,   name='obras-editar'),
+    url(r'^obras/remove/$',   fmaestros_views.obras_borrar,   name='obras-borrar'),
+    url(r'^obras/print/$',    fmaestros_views.obras_imprimir, name='obras-imprimir'),
+    
+# _______________ FIN Código añadido por crea_prototipo_fmaestros.py
+
+ 
+
+# _____________ INI Código añadido por crea_prototipo_fmaestros.py
+ 
+    url(r'^obras/$',          fmaestros_views.obras_listado,  name='obras-list'),
+    url(r'^obras/list/$',     fmaestros_views.obras_listado,  name='obras-list'),
+    url(r'^obras/list/add/$', fmaestros_views.obras_nuevo,    name='obras-nuevo'),
+    url(r'^obras/add/$',      fmaestros_views.obras_nuevo,    name='obras-nuevo'),
+    url(r'^obras/edit/$',     fmaestros_views.obras_editar,   name='obras-editar'),
+    url(r'^obras/remove/$',   fmaestros_views.obras_borrar,   name='obras-borrar'),
+    url(r'^obras/print/$',    fmaestros_views.obras_imprimir, name='obras-imprimir'),
+    
+# _______________ FIN Código añadido por crea_prototipo_fmaestros.py
 ]

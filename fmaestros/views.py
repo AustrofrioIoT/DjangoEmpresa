@@ -180,7 +180,7 @@ def cuentas_imprimir(request):
 #--------------  Apuntes contables --------------------------------------------------------
 def apuntes_listado(request):
     return listado_clase(request,
-                titulo_pagina='Listado Apuntes Contables',
+                titulo_pagina='Listado de Gastos e Ingresos', #cambiar Titulo
                 idp='fich-apuntes-list',
                 formClass=None,
                 modelClass=models.Apunte,
@@ -217,3 +217,100 @@ def apuntes_borrar(request):
 
 def apuntes_imprimir(request):
     return None
+
+# _____________ INI Código añadido por crea_prototipo_fmaestros.py
+ 
+    
+def obras_listado(request):
+    return listado_clase(request,
+                titulo_pagina='Listado Obras',
+                idp='obras-list',
+                formClass=None,
+                modelClass=models.Obra,
+                pagina_listado='backoffice/fmaestros/obras-list.html',
+                pagina_formulario=None)
+
+def obras_nuevo(request):
+    return nuevoeditar_clase(request,
+                 es_nuevo=True,
+                 titulo_pagina='Nuevo Obra',
+                 idp='obras-nuevo',
+                 formClass=forms.ObraForm,
+                 modelClass=models.Obra,
+                 # pagina_nuevo_dato='backoffice/fmaestros/obras-nuevo-editar.html')
+                 pagina_nuevo_dato='backoffice/fmaestros/fich_plantilla_nuevoeditar.html')
+
+def obras_editar(request):
+    return nuevoeditar_clase(request,
+                 es_nuevo=False,
+                 titulo_pagina='Editar Obra',
+                 idp='obras-editar',
+                 formClass=forms.ObraForm,
+                 modelClass=models.Obra,
+                 # pagina_nuevo_dato='backoffice/fmaestros/obras-nuevo-editar.html')
+                 pagina_nuevo_dato='backoffice/fmaestros/fich_plantilla_nuevoeditar.html')
+
+def obras_borrar(request):
+    return borrar_clase(request,
+                titulo_pagina='Borrar Obra',
+                titulo_clase='Obra',
+                idp='obras-borrar',
+                modelClass=models.Obra,
+                pagina_html='backoffice/fmaestros/fich_plantilla_borrar.html',
+                path_cancelar='/obras/list/',
+                success_url='/obras/list/')
+
+def obras_imprimir(request):
+    return None
+    
+    
+# _______________ FIN Código añadido por crea_prototipo_fmaestros.py
+ 
+# _____________ INI Código añadido por crea_prototipo_fmaestros.py
+ 
+    
+def obras_listado(request):
+    return listado_clase(request,
+                titulo_pagina='Listado Obras',
+                idp='obras-list',
+                formClass=None,
+                modelClass=models.Obra,
+                pagina_listado='backoffice/fmaestros/obras-list.html',
+                pagina_formulario=None)
+
+def obras_nuevo(request):
+    return nuevoeditar_clase(request,
+                 es_nuevo=True,
+                 titulo_pagina='Nuevo Obra',
+                 idp='obras-nuevo',
+                 formClass=forms.ObraForm,
+                 modelClass=models.Obra,
+                 # pagina_nuevo_dato='backoffice/fmaestros/obras-nuevo-editar.html')
+                 pagina_nuevo_dato='backoffice/fmaestros/fich_plantilla_nuevoeditar.html')
+
+def obras_editar(request):
+    return nuevoeditar_clase(request,
+                 es_nuevo=False,
+                 titulo_pagina='Editar Obra',
+                 idp='obras-editar',
+                 formClass=forms.ObraForm,
+                 modelClass=models.Obra,
+                 # pagina_nuevo_dato='backoffice/fmaestros/obras-nuevo-editar.html')
+                 pagina_nuevo_dato='backoffice/fmaestros/fich_plantilla_nuevoeditar.html')
+
+def obras_borrar(request):
+    return borrar_clase(request,
+                titulo_pagina='Borrar Obra',
+                titulo_clase='Obra',
+                idp='obras-borrar',
+                modelClass=models.Obra,
+                pagina_html='backoffice/fmaestros/fich_plantilla_borrar.html',
+                path_cancelar='/obras/list/',
+                success_url='/obras/list/')
+
+def obras_imprimir(request):
+    return None
+    
+    
+# _______________ FIN Código añadido por crea_prototipo_fmaestros.py
+ 

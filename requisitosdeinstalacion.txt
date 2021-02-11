@@ -1,0 +1,12 @@
+Para instalar el pip2 en ubuntu 20 es necesesario descargar el archivo de la siguiente locacion 
+https://bootstrap.pypa.io/2.7/get-pip.py
+luego instalando usando 
+python2 get-pip.py
+
+ 
+ iniciar con python 2///
+pipenv --two shell
+
+pip2 install reportlab
+pip2 install psycopg2-binary
+

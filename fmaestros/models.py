@@ -84,3 +84,31 @@ class Apunte(models.Model):
             models.Index(['es_gasto']),
             models.Index(['cuenta']),
         ]
+
+# _____________ INI Código añadido por crea_prototipo_fmaestros.py
+ 
+    
+class Obra(models.Model):
+    codigo = models.CharField(max_length=4, null=True, blank=True, unique=True)
+    nombre = models.CharField(max_length=60)
+    
+    observaciones = models.TextField(null=True, blank=True)
+
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
+    fecha_modificacion = models.DateTimeField(auto_now=True)
+    fecha_paso_historico = models.DateTimeField(null=True, blank=True, default=None)
+
+
+    class Meta:
+        verbose_name_plural = "Obras"
+        indexes = [
+            models.Index(fields=['codigo']),
+        ]
+
+    def __str__(self):
+        dato = str(self.nombre) + '  ' + str(self.codigo)
+        return encoding.smart_str(dato, encoding='utf8', errors='ignore')   
+    
+    
+# _______________ FIN Código añadido por crea_prototipo_fmaestros.py
+ 

@@ -2,8 +2,7 @@
 
 from django import forms
 from django.core.validators import MinLengthValidator
-
-from fmaestros.models import Empresa, Cuenta, Apunte
+from fmaestros.models import Empresa, Cuenta, Apunte, Obra
 import decimal
 
 from django.forms import ModelForm
@@ -138,4 +137,45 @@ class ApunteForm(forms.ModelForm):
     #         raise forms.ValidationError("No es un importe válido")
     #     return numero
 
+
+
+# _____________ INI Código añadido por crea_prototipo_fmaestros.py
+ 
+    
+class ObraForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        self.es_nuevo = kwargs.get('es_nuevo')
+        if self.es_nuevo is not None:
+            del kwargs['es_nuevo']
+        super(ObraForm, self).__init__(*args, **kwargs)
+
+    class Meta:
+        model = Obra
+        localized_fields = '__all__'
+        exclude = ()
+        widgets = {
+            'nombre': forms.TextInput(attrs={'size':18}),
+            'codigo': forms.TextInput(attrs={'size':18}),
+            'fecha_paso_historico': forms.DateInput(attrs={'size':8}),
+            'observaciones': forms.Textarea(attrs={'rows':4, 'cols':40, 'autocorrect':"off", 'autocapitalize':"off", 'spellcheck':"false"}),
+            }
+
+
+    def validate_unique(self, *args, **kwargs):
+        if self.es_nuevo:
+            super(ObraForm, self).validate_unique(*args, **kwargs)
+        else:
+            exclude = self._get_validation_exclusions()
+            try:
+                self.instance.validate_unique(exclude=exclude)
+            except forms.ValidationError as e:
+                try:
+                    del e.error_dict['codigo']
+                except:
+                    pass
+                self._update_errors(e)
+    
+    
+# _______________ FIN Código añadido por crea_prototipo_fmaestros.py
+ 
 

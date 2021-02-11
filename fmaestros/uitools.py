@@ -22,6 +22,7 @@ def dime_lista_ids_navegacion(apartado, id_actual):
         'cuentas': models.Cuenta,
         'apuntes': models.Apunte,
         'usuarios': Usuario,
+        'obras':models.Obra,
     }
 
     if id_actual is None:

@@ -82,4 +82,3 @@ def inserta_cuentas():
     return {'l_nok': l_nok, 'l_ok': l_ok}
 
 
-

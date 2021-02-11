@@ -25,22 +25,22 @@
 
 -->
     <table><tbody>
-    <tr><th> Fecha: </th><td>&nbsp;</td>       <td>{{ dato.fecha|date:'d/m/Y' }}</td> </tr>
-    <tr><th> Descripción: </th><td>&nbsp;</td> <td>{{ dato.descripcion }}</td> </tr>
-    <tr><th> Cuenta: </th><td>&nbsp;</td> <td>{{ dato.cuenta }}</td> </tr>
-    <tr><th> Importe: </th><td>&nbsp;</td><td>{{ dato.importe }}</td> </tr>
-    <tr><th> Tipo: </th><td>&nbsp;</td>   <td>{{ dato.es_gasto|yesno:"Gasto,Ingreso,--" }}</td> </tr>
+    <tr><td> Fecha: </th><td>&nbsp;</td>       <td>{{ dato.fecha|date:'d/m/Y' }}</td> </tr>
+    <tr><td> Descripción: </th><td>&nbsp;</td> <td>{{ dato.descripcion }}</td> </tr>
+    <tr><td> Cuenta: </th><td>&nbsp;</td> <td>{{ dato.cuenta }}</td> </tr>
+    <tr><td> Importe: </th><td>&nbsp;</td><td>{{ dato.importe }}</td> </tr>
+    <tr><td> Tipo: </th><td>&nbsp;</td>   <td>{{ dato.es_gasto|yesno:"Gasto,Ingreso,--" }}</td> </tr>
     </tbody></table>
               </div>
 {% else %}
              <div class="callout callout-danger">
                 <h4>Se va a borrar el siguiente {{ titulo_clase }}:</h4>
     <table><tbody>
-    <tr><th> Fecha: </th><td>&nbsp;</td>       <td>{{ dato.fecha|date:'d/m/Y' }}</td> </tr>
-    <tr><th> Descripción: </th><td>&nbsp;</td> <td>{{ dato.descripcion }}</td> </tr>
-    <tr><th> Cuenta: </th><td>&nbsp;</td> <td>{{ dato.cuenta }}</td> </tr>
-    <tr><th> Importe: </th><td>&nbsp;</td><td>{{ dato.importe }}</td> </tr>
-    <tr><th> Tipo: </th><td>&nbsp;</td>   <td>{{ dato.es_gasto|yesno:"Gasto,Ingreso,--" }}</td> </tr>
+    <tr><td> Fecha: </th><td>&nbsp;</td>       <td>{{ dato.fecha|date:'d/m/Y' }}</td> </tr>
+    <tr><td> Descripción: </th><td>&nbsp;</td> <td>{{ dato.descripcion }}</td> </tr>
+    <tr><td> Cuenta: </th><td>&nbsp;</td> <td>{{ dato.cuenta }}</td> </tr>
+    <tr><td> Importe: </th><td>&nbsp;</td><td>{{ dato.importe }}</td> </tr>
+    <tr><td> Tipo: </th><td>&nbsp;</td>   <td>{{ dato.es_gasto|yesno:"Gasto,Ingreso,--" }}</td> </tr>
     </tbody></table>
               </div>
 {% endif %}

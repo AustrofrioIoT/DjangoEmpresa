@@ -27,6 +27,7 @@ if BASE_DIR.find('/home/desarrollo/') != -1:
     DEBUG = True
 else:
     DEBUG = False
+#DEBUG=True
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
     'usuarios',
     'cvc',
     'pcontable',
+    'tconta_taf',# falto agregar la app
 ]
 
 MIDDLEWARE = [
@@ -158,7 +160,7 @@ STATICFILES_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     #os.path.join(BASE_DIR,'staticfiles'),
-    os.path.join(os.path.dirname(__file__),'staticfiles'),
+    os.path.join(BASE_DIR,'static'),
     )
 
 # List of finder classes that know how to find static files in

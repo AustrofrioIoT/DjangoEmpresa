@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+  {% load staticfiles %}
   {% block head_meta%}{% endblock%}
 
   <title>{{ titulo_pagina }}</title>
-  <link rel="shortcut icon" type="image/x-icon" href="/static/backoffice/imagenes/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'backoffice/imagenes/favicon.ico'%}">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -221,7 +221,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="/static/backoffice/imagenes/logo_160x160.png" class="img-circle" alt="User Image">
+	  <img src="{% static 'backoffice/imagenes/logo_160x160.png'%}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Gestión de Facturas </p>

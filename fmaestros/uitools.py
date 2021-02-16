@@ -21,8 +21,8 @@ def dime_lista_ids_navegacion(apartado, id_actual):
         'empresas': models.Empresa,
         'cuentas': models.Cuenta,
         'apuntes': models.Apunte,
-        'usuarios': Usuario,
         'obras':models.Obra,
+        'usuarios': Usuario,
     }
 
     if id_actual is None:

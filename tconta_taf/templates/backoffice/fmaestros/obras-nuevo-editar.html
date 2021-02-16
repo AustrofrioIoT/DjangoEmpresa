@@ -37,28 +37,27 @@
     <table> <tbody>
 <tr valign="top"><td> <table class="uifmaestros"> <tbody>
 <!----- Grupo de datos de la izquierda ---->
-
+<!--
     <tr><td>  Dato 1 </td><td>&nbsp;</td>
         <td>{{ formulario.dato1 }}</td>
         <td>{% for error in formulario.dato1.errors %}<p style="color:red"> &nbsp; {{ error|escape }}</p>{% endfor %}</td>
     </tr>
-
+-->
 <!----- FIN Grupo de datos de la izquierda ---->
 </tbody></table></td>
 <td> &nbsp; &nbsp; &nbsp; </td>
 <td> <table class="uifmaestros"> <tbody>
 <!----- Grupo de datos de la derecha ---->
 
-
+    <tr><td>  Observaciones </td><td>&nbsp;</td>
+        <td>{{ formulario.observaciones }}</td>
+        <td>{% for error in formulario.observaciones.errors %}<p style="color:red"> &nbsp; {{ error|escape }}</p>{% endfor %}</td>
+    </tr>
     <tr><td>  Fecha Paso Historico </td><td>&nbsp;</td>
         <td>{{ formulario.fecha_paso_historico }} &nbsp; &nbsp; &nbsp;{{ formulario.hora_paso_historico }}</td>
         <td>{% for error in formulario.fecha_paso_historico.errors %}<p style="color:red"> &nbsp; {{ error|escape }}</p>{% endfor %}
             {% for error in formulario.hora_paso_historico.errors %}<p style="color:red"> &nbsp; {{ error|escape }}</p>{% endfor %}
         </td>
-    </tr>
-    <tr><td>  Observaciones </td><td>&nbsp;</td>
-        <td>{{ formulario.observaciones }}</td>
-        <td>{% for error in formulario.observaciones.errors %}<p style="color:red"> &nbsp; {{ error|escape }}</p>{% endfor %}</td>
     </tr>
 <!----- FIN Grupo de datos de la derecha ---->
 </tbody></table></td></tr>

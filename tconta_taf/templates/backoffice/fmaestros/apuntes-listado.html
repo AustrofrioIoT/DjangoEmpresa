@@ -76,7 +76,8 @@ var Tabla_facturas;
                   <td>Tipo</td>
                   <td>Cuenta</td>
                   <td>Descripción</td>
-                </tr>
+		  <td>Obras</td>
+		</tr>
                 </thead>
                 <tbody>
 
@@ -88,6 +89,7 @@ var Tabla_facturas;
                     <td> {{ dato.es_gasto|yesno:"Gasto,Ingreso,--"  }}</td>
                     <td> {{ dato.cuenta }}</td>
                     <td> {{ dato.descripcion }}</td>
+		    <td> {{ dato.obra }}</td>
                 </tr>
 {%endfor%}
 

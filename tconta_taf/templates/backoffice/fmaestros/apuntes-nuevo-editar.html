@@ -69,6 +69,11 @@
         <td>{{ formulario.observaciones }}</td>
         <td>{% for error in formulario.observaciones.errors %}<p style="color:red"> &nbsp; {{ error|escape }}</p>{% endfor %}</td>
     </tr>
+    <tr><td> Obras </td><td>&nbsp;</td>
+        <td>{{ formulario.obra}}</td>
+        <td>{% for error in formulario.obra.errors %}<p style="color:red"> &nbsp; {{ error|escape }}</p>{% endfor %}</td>
+   </tr>     
+
 <!----- FIN Grupo de datos de la derecha ---->
 </tbody></table></td></tr>
     </tbody></table>

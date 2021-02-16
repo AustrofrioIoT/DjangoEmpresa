@@ -42,7 +42,7 @@ class Cuenta(models.Model):
     observaciones = models.TextField(null=True, blank=True)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_modificacion = models.DateTimeField(auto_now=True)
-    fecha_paso_historico = models.DateTimeField(null=True, blank=True, default=None)
+    fecha_paso_historico = models.DateField(null=True, blank=True) #correcion only DateField
 
     def __str__(self):
         dato='%s' % (self.nombre,)
@@ -51,6 +51,31 @@ class Cuenta(models.Model):
     class Meta:
         verbose_name_plural = "Tipos de Gastos e Ingresos"
 
+# _____________ INI Código añadido por crea_prototipo_fmaestros.py
+ 
+    
+class Obra(models.Model):
+    codigo = models.CharField(max_length=4, unique=True,blank=True)
+    nombre = models.CharField(max_length=60)
+    
+    observaciones = models.TextField(null=True, blank=True)
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
+    fecha_modificacion = models.DateTimeField(auto_now=True)
+    fecha_paso_historico = models.DateField(null=True, blank=True)#corregido
+
+    def __str__(self):
+        dato = '%s' % (self.nombre,)#str(self.nombre) + '  ' + str(self.codigo)
+        return encoding.smart_str(dato, encoding='utf8', errors='ignore')   
+
+    class Meta:
+        verbose_name_plural = "Obras"
+        #indexes = [
+         #   models.Index(fields=['codigo']),
+        #]
+
+    
+# _______________ FIN Código añadido por crea_prototipo_fmaestros.py
+ 
 
 class Apunte(models.Model):
     """
@@ -66,11 +91,12 @@ class Apunte(models.Model):
     importe = models.DecimalField(max_digits=12, decimal_places=2)
     es_gasto = models.BooleanField()
     cuenta = models.ForeignKey(Cuenta)
+    obra = models.ForeignKey(Obra,null=True,blank=True) #agregado la llave foranea
 
     observaciones = models.TextField(null=True, blank=True)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_modificacion = models.DateTimeField(auto_now=True)
-    fecha_paso_historico = models.DateTimeField(null=True, blank=True, default=None)
+    fecha_paso_historico = models.DateField(null=True, blank=True)#corregido
 
     def __str__(self):
         dato='%s %s %s %s' % (self.fecha, self.descripcion, self.importe, self.es_gasto)
@@ -83,32 +109,6 @@ class Apunte(models.Model):
             models.Index(['fecha']),
             models.Index(['es_gasto']),
             models.Index(['cuenta']),
+            models.Index(['obra']),
         ]
 
-# _____________ INI Código añadido por crea_prototipo_fmaestros.py
- 
-    
-class Obra(models.Model):
-    codigo = models.CharField(max_length=4, null=True, blank=True, unique=True)
-    nombre = models.CharField(max_length=60)
-    
-    observaciones = models.TextField(null=True, blank=True)
-
-    fecha_creacion = models.DateTimeField(auto_now_add=True)
-    fecha_modificacion = models.DateTimeField(auto_now=True)
-    fecha_paso_historico = models.DateTimeField(null=True, blank=True, default=None)
-
-
-    class Meta:
-        verbose_name_plural = "Obras"
-        indexes = [
-            models.Index(fields=['codigo']),
-        ]
-
-    def __str__(self):
-        dato = str(self.nombre) + '  ' + str(self.codigo)
-        return encoding.smart_str(dato, encoding='utf8', errors='ignore')   
-    
-    
-# _______________ FIN Código añadido por crea_prototipo_fmaestros.py
- 

@@ -21,8 +21,8 @@ menu_solo_consulta = [
     {'tit': u'Gastos e Ingresos',       'url-name': 'fich-apuntes-list',      'ico': 'fa-euro', 'submenu': []},
     {'tit': u'Listado Gastos e Ingresos',  'url-name': 'relacion_gastos_ingresos',      'ico': 'fa-euro', 'submenu': []},
     {'tit': u'Cambiar contraseña',  'url-name': 'cambiar_passwd', 'ico': 'fa-lock', 'submenu': []},
-    {'tit': u'Salir',               'url-name': 'salir',          'ico': 'fa-sign-out', 'submenu': []},
     {'tit': u'Obras', 'idp': '', 'url-name': 'obras-list',  'ico': 'fa-heart', 'submenu': []},
+    {'tit': u'Salir',               'url-name': 'salir',          'ico': 'fa-sign-out', 'submenu': []},
 ]
 
 
@@ -43,8 +43,8 @@ menu_admin = [
     {'tit': u'Tipos de Cuentas',   'url-name': 'fich-cuentas-list',      'ico': 'fa-list', 'submenu': []},
     {'tit': u'Usuarios',           'url-name': 'fich-usuarios-list', 'ico': 'fa-user', 'submenu': []},
     {'tit': u'Cambiar contraseña',  'url-name': 'cambiar_passwd', 'ico': 'fa-lock', 'submenu': []},
-    {'tit': u'Salir',               'url-name': 'salir',          'ico': 'fa-sign-out', 'submenu': []},
     {'tit': u'Obras', 'idp': '', 'url-name': 'obras-list',  'ico': 'fa-heart', 'submenu': []},
+    {'tit': u'Salir',               'url-name': 'salir',          'ico': 'fa-sign-out', 'submenu': []},
 ]
 
 

@@ -52,3 +52,6 @@ NOTA 2: Utilidades Plataforma:
 
  ./crea_telemap_css.py: modifica el CSS donde van definidos los colores
         de la barra lateral, de las cabeceras, etc.
+
+from docs import inserta_iniciales
+inserta_iniciales.inserta_cuentas()

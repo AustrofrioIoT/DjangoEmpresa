@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 django = "==1.11.2"
 django-bootstrap3 = "==3.3"
+django-extensions = "*"
 
 [dev-packages]
 

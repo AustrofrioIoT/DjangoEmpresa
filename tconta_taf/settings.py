@@ -23,11 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'RoP%%^@*4qZ3Pezshl,SUb6nPQFrLD):;y:@MLbqZ0yC9X=eaR'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if BASE_DIR.find('/home/desarrollo/') != -1:
-    DEBUG = True
-else:
-    DEBUG = False
-#DEBUG=True
+#if BASE_DIR.find('/home/desarrollo/') != -1:
+#    DEBUG = True
+#else:
+#    DEBUG = False
+DEBUG=True
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'cvc',
     'pcontable',
     'tconta_taf',# falto agregar la app
+    #'django-extensions',#facilitar el uso del shell en manage
 ]
 
 MIDDLEWARE = [

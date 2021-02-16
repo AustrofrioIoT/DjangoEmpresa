@@ -45,40 +45,35 @@ def inserta_usuarios():
 
 l_cuentas = [
 #  codigo, nombre
-    ('01', 'AMBIGUS'),
-    ('02', 'TAQUILLA'),
-    ('03', 'FUTBOL BASE'),
-    ('04', 'FEDERACION'),
-    ('05', 'SUBVENCIONES'),
-    ('06', 'FISIO'),
-    ('07', 'CAMPO MANTENIMIENTO'),
-    ('08', 'CARNETS'),
-    ('09', 'PATROCINIOS'),
-    ('10', 'MATERIAL DEPORTIVO'),
-    ('11', 'INVITACIONES'),
-    ('12', 'OTROS'),
-    ('13', 'VALLAS PUBLICITARIAS'),
-    ('14', 'LOTERIAS Y RIFAS'),
-    ('15', 'MERCHANDISING'),
-    ('16', 'SUELDOS Y SALARIOS'),
-    ('17', 'ARBITRAJES'),
+    ('01', 'GASOIL'),
+    ('02', 'MATERIAL'),
+    ('03', 'ALQUILER MAQUINARIA'),
+    ('04', 'DESPLAZAMIENTOS'),
+    ('05', 'COMIDAS'),
+    ('06', 'HOTEL'),
+    ('07', 'REPARACIONES MAQUINARIA'),
+    ('08', 'MAQUINARIA'),
 ]
 
 
-def inserta_cuentas():
+# insertar True para agregar las cuentas y False para borrarlas
+def inserta_cuentas(borrar_actuales):
     """
     :return:
     """
     l_ok = []
     l_nok = []
-    for t in l_cuentas:
-        try:
-            cta = Cuenta(codigo=t[0].strip(), nombre=t[1])
-            cta.save()
-            l_ok.append((cta.nombre, cta.id,))
-        except Exception as e:
-            l_nok.append((t, e,))
 
+    if borrar_actuales==True:
+        for t in l_cuentas:
+            try:
+                cta = Cuenta(codigo=t[0].strip(), nombre=t[1])
+                cta.save()
+                l_ok.append((cta.nombre, cta.id,))
+            except Exception as e:
+                l_nok.append((t, e,))
+    else:
+        Cuenta.objects.all().delete()
     return {'l_nok': l_nok, 'l_ok': l_ok}
 
 

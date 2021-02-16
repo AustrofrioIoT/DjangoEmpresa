@@ -237,8 +237,8 @@ def obras_nuevo(request):
                  idp='obras-nuevo',
                  formClass=forms.ObraForm,
                  modelClass=models.Obra,
-                 # pagina_nuevo_dato='backoffice/fmaestros/obras-nuevo-editar.html')
-                 pagina_nuevo_dato='backoffice/fmaestros/fich_plantilla_nuevoeditar.html')
+                 pagina_nuevo_dato='backoffice/fmaestros/obras-nuevo-editar.html')
+                 #pagina_nuevo_dato='backoffice/fmaestros/fich_plantilla_nuevoeditar.html')
 
 def obras_editar(request):
     return nuevoeditar_clase(request,
@@ -247,8 +247,8 @@ def obras_editar(request):
                  idp='obras-editar',
                  formClass=forms.ObraForm,
                  modelClass=models.Obra,
-                 # pagina_nuevo_dato='backoffice/fmaestros/obras-nuevo-editar.html')
-                 pagina_nuevo_dato='backoffice/fmaestros/fich_plantilla_nuevoeditar.html')
+                 pagina_nuevo_dato='backoffice/fmaestros/obras-nuevo-editar.html')
+                 #pagina_nuevo_dato='backoffice/fmaestros/fich_plantilla_nuevoeditar.html')
 
 def obras_borrar(request):
     return borrar_clase(request,

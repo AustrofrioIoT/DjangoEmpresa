@@ -22,7 +22,7 @@ class Empresa(models.Model):
 
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_modificacion = models.DateTimeField(auto_now=True)
-    fecha_paso_historico = models.DateTimeField(null=True, blank=True, default=None)
+    fecha_paso_historico = models.DateField(null=True, blank=True)
 
     def __str__(self):
         dato='%s' % (self.nombre,)

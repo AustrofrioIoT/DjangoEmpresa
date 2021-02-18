@@ -64,3 +64,9 @@ Guardamos y ejecutamos desde línea de comandos:
 root@superkol:~/tconta# ./crea_prototipo_fmaestros.py
 Siga las instrucciones que le indica el script para modificar urls.py, menu.py y
 fmaestros/uitools.py.
+
+#to add db and erase
+from docs import inserta_iniciales
+inserta_iniciales.inserta_cuentas(True or False)
+
+

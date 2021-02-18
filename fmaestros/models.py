@@ -64,14 +64,15 @@ class Obra(models.Model):
     fecha_paso_historico = models.DateField(null=True, blank=True)#corregido
 
     def __str__(self):
-        dato = '%s' % (self.nombre,)#str(self.nombre) + '  ' + str(self.codigo)
+        dato = str(self.nombre) + '  ' + str(self.codigo)
+               #'%s' % (self.nombre,)#
         return encoding.smart_str(dato, encoding='utf8', errors='ignore')   
 
     class Meta:
         verbose_name_plural = "Obras"
-        #indexes = [
-         #   models.Index(fields=['codigo']),
-        #]
+        indexes = [
+            models.Index(fields=['codigo']),
+        ]
 
     
 # _______________ FIN Código añadido por crea_prototipo_fmaestros.py
